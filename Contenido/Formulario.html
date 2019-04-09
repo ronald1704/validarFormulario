@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <script type="text/javascript" src="../js/validarFormulario.js"></script>
+  <meta charset="utf-8">
+  <title>FORMULARIO</title>
+</head>
+
+<body style="background-color:skyblue;">
+  <a name="Formulario"></a>
+  <form name="formulario" class="" action="../index.html" method="post">
+    <section>
+      <fieldset>
+        <legend align="center">Datos Personales</legend>
+        Ingrese su nombre: <br>
+        <input id="nombre" type="text" name="txtNombre" value=""><br><br>
+        Ingrese su apellido:<br>
+        <input id="apellido" type="text" name="txtApellido" value=""><br><br>
+        Ingrese su numero de cedula: <br>
+        <input id="cedula" type="text" name="txtCedula" value=""><br><br>
+        Ingrese una contraseña: <br>
+        <input id="contrasenia" type="password" name="txtContraseña" value=""><br><br>
+        Adjunte su cedula: <br>
+        <input type="file" name="cedulaScanner" value="">
+      </fieldset>
+      <fieldset>
+        <legend align="center">Conocimientos Basicos</legend>
+        Seleccione su maximo nivel academico: <br>
+        <input id="sinEstudios" type="radio" name="rEstudios" value="">Sin Estudios
+        <input id="primaria" type="radio" name="rEstudios" value="">Primaria
+        <input id="secundaria" type="radio" name="rEstudios" value="">Secundaria
+        <input id="universitario" type="radio" name="rEstudios" value="">Universitario
+      </fieldset>
+      <fieldset>
+        <legend align="center">Datos Secundarios</legend>
+        <select name="Municipio">
+          <option value="1">Seleccione un Municipio</option>
+          <option value="2">Sincelejo</option>
+          <option value="3">Buenavista</option>
+          <option value="4">Caimito</option>
+          <option value="5">Chalán</option>
+          <option value="6">Colosó</option>
+          <option value="7">Corozal</option>
+          <option value="8">Coveñas</option>
+          <option value="9">El Roble</option>
+        </select><br><br>
+        Seleccione uno o varios colores (Presione Ctrl para seleccionar varios colores)<br>
+        <select name="colores[]" size="4" multiple>
+          <option value="1">Amarillo</option>
+          <option value="2">Rojo</option>
+          <option value="3">Azul</option>
+          <option value="4">Gris</option>
+          <option value="5">Blanco</option>
+        </select><br><br>
+        Seleccione según su gusto: <br>
+        <select class="" name="Artuculo">
+          <option value="0">Seleccione Carne o Fruta</option>
+          <optgroup label="Carnes">
+            <option value="1">Cerdo</option>
+            <option value="2">Res</option>
+            <option value="3">Pollo</option>
+            <option value="4">Carnero</option>
+          </optgroup>
+          <optgroup label="Frutas">
+            <option value="5">Manzana</option>
+            <option value="6">Pera</option>
+            <option value="7">Papaya</option>
+            <option value="8">Uvas</option>
+          </optgroup>
+        </select>
+      </fieldset><br>
+      <input type="image" name="" value="" src="../imagenes/enviar.png" onclick="validarNombre(); validarApellido(); validarContrasenia();  validarCedula(formulario.cedula.value);  validarRadioButton();  validarSelectMunicipio();  validarSelectArtuculo();">
+      <input type="image" name="" value="" src="../imagenes/cancelar.png">
+  </form>
+  </section>
+  <aside>
+  </aside>
+</body>
+
+</html>
